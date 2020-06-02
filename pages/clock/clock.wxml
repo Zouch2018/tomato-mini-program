@@ -1,0 +1,15 @@
+<!--pages/clock/clock.wxml-->
+<view class="container">
+  <view class="clock"><t-tomato text="{{time}}" fontSize="50"></t-tomato></view>
+  
+  <view class="stop" wx:if="{{!againButtonVisible}}">
+  <t-button type="change" size="mini" text="暂停" bindtap="clearTimer" wx:if="{{timerStatus==='start'}}"></t-button>
+ <t-button type="change" size="mini" text="开始" bindtap="startTimer" wx:else></t-button>
+  </view>
+  <view class="abandon" wx:if="{{!againButtonVisible}}"> <t-button  size="mini" text="放弃" bindtap='showConfirm'></t-button></view>
+  <view class="again" wx:if="{{againButtonVisible}}" bindtap="againTimer">
+    <t-button type="change" size="mini" text="再来一组"></t-button>
+  </view>
+   <view><t-confirm visible="{{confirmVisible}}" placeholder="真的要放弃吗？" bindconfirm="confirmAbandon" bindcancel="hideConfirm"></t-confirm></view>
+   <view><t-confirm wx:if="{{finishConfirmVisible}}" placeholder="记录一下，完成了什么" bindconfirm="confirmFinish" bindcancel="confirmCancel"></t-confirm></view>
+</view>

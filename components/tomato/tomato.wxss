@@ -1,0 +1,22 @@
+/* components/tomato/tomato.wxss */
+.tomato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tomato text {
+  color: #fff;
+  font-size: 26rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.tomato image {
+  width: 320rpx;
+  height: 320rpx;
+}
+.active {
+  opacity: 0.9;
+}

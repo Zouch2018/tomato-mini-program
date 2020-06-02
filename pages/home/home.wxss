@@ -1,0 +1,66 @@
+/* pages/home/home.wxss */
+.home-container {
+  height: 100vh;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+}
+.todoList {
+ width: 750rpx;
+ height: 552rpx;
+ border:1px solid blue;
+ color: #333;
+ font-size: 28rpx;
+}
+.item {
+  width: 690rpx;
+  height: 72rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.item  .select {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  border: 2px solid #F8765D;
+  margin-left: 20rpx; 
+}
+.item .select.active {
+  background: #F8765D;
+}
+.item .content {
+  margin-left: 20rpx;
+}
+.tomato-wrapper {
+  flex: 1;
+  margin-top: 33px;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+.tomato-wrapper .tomato {
+  background-color: #eef7f6;
+  border-radius: 8rpx;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.10);
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.createButton {
+  position: absolute;
+  top: 585rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

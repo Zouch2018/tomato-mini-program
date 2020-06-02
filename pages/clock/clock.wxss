@@ -1,0 +1,14 @@
+/* pages/clock/clock.wxss */
+.container {
+  background: #f0f7f6;
+  height: 100vh;
+  border: 1px solid blue;
+}
+.clock {
+  padding-top:15rpx;
+  border: 1px solid blue;
+}
+.stop {
+  margin-bottom: 0rpx;
+  border: 1px solid black;
+}

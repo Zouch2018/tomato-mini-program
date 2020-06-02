@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "t-tomato": "../../components/tomato/tomato",
+    "t-button": "../../components/button/button",
+    "t-confirm": "../../components/confirm/confirm"
+  }
+}
