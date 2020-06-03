@@ -4,6 +4,7 @@
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   box-sizing: border-box;
   padding-top: 10rpx;
@@ -45,6 +46,7 @@
   margin-top: 33px;
   padding: 0 30rpx;
   box-sizing: border-box;
+  width: 100%;
 }
 .tomato-wrapper .tomato {
   background-color: #eef7f6;

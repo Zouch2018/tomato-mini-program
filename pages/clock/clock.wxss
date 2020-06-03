@@ -2,13 +2,15 @@
 .container {
   background: #f0f7f6;
   height: 100vh;
-  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
 }
 .clock {
-  padding-top:15rpx;
-  border: 1px solid blue;
+  padding-top:315rpx;
 }
 .stop {
-  margin-bottom: 0rpx;
-  border: 1px solid black;
+  margin-top: 40rpx;
+}
+.abandon {
+  margin-top: 40rpx;
 }

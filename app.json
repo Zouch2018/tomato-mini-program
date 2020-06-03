@@ -3,10 +3,7 @@
     "pages/home/home",
     "pages/login/login",
     "pages/my/my",
-    "pages/clock/clock",
-    "components/button/button",
-    "components/tomato/tomato",
-    "components/confirm/confirm"
+    "pages/clock/clock"
   ],
   "window":{
     "backgroundTextStyle":"light",
