@@ -3,11 +3,11 @@
   height: 100vh;
   background: #f6f6f6;
   color:#333;
+  margin-bottom: 5rpx;
 }
 .container .header {
   height: 170rpx;
   width: 100%;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   background: #fff;
@@ -40,18 +40,33 @@
   justify-content: space-around;
   align-items: center;
   background: #fff;
-  
 }
-.container .tabs .active {
-  border-bottom: 8rpx solid #FE996F;
+.tabs > view.hover-active { 
+  opacity: 0.5;
+ }
+ .tabs>view {
+   position: relative;
+   
+ }
+.tabs > view.active::after {
+  content: "";
+  width: 80%;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: #FE996F;
+  position: absolute;
+  left: 50%;
+  bottom: -20rpx;
+  transform: translate(-50%,-50%);
 }
+
+
 .container .lists{
   flex: 1;
   padding: 0 24rpx;
   box-sizing: border-box;
   overflow:scroll;
   background: #f6f6f6;
-  border: 1px solid blue;
 }
 .container .lists .item {
   font-size: 32rpx;

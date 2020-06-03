@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/login/login",
     "pages/my/my",
-    "pages/home/home",
     "pages/clock/clock",
-   
-    "pages/test/test"
+    "components/button/button",
+    "components/tomato/tomato",
+    "components/confirm/confirm"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -26,13 +27,7 @@
         "selectedIconPath": "images/home-active.png"
       },
       {
-        "pagePath": "pages/home/home",
-        "text": "数据统计",
-        "iconPath": "images/total.png",
-        "selectedIconPath": "images/total-active.png"
-      },
-      {
-        "pagePath": "pages/test/test",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-active.png"

@@ -1,16 +1,24 @@
 <!--pages/home/home.wxml-->
 <view class="home-container">
   <scroll-view class="todoList" scroll-y="true">
-    <view class="item" wx:for="{{lists}}" wx:for-index="index" wx:key="id" bindtap="destroyToDo" data-index="{{index}}">
-      <view class="select {{item.finished && 'active'}}"></view>
-        <text class="content">{{item.text}}</text>
+    <view class="item" wx:for="{{lists}}" wx:for-index="index" 
+          wx:key="{{item.id}}"   wx:if="{{!item.completed}}">
+      <view class="select {{item.completed && 'active'}}" 
+            data-index="{{index}}" data-id="{{item.id}}" bindtap="destroyToDo"></view>
+        <text class="content" data-index="{{index}}" 
+              data-id="{{item.id}}" bindtap="changeText" data-content="{{item.description}}">{{item.description}}</text>
     </view>
   </scroll-view>
-  <t-button class="createButton" type="change" text="创建任务" bindtap="showConfirm"></t-button>
+  <t-button class="createButton" type="change" text="创建任务" bindtap="showCreateConfirm"></t-button>
   <view class="tomato-wrapper">
     <navigator class="tomato" url="/pages/clock/clock">
       <t-tomato text="开始闹钟"></t-tomato>
     </navigator>
   </view>
-  <t-confirm palceholder="我完成了什么" bindconfirm="createConfirm" bindcancel="hideConfirm" visible="{{visibleConfirm}}"></t-confirm>
+  <t-confirm palceholder="我完成了什么" bindconfirm="createConfirm" 
+             bindcancel="hideCreateConfirm" visible="{{visibleCreateConfirm}}">
+             </t-confirm>
+   <t-confirm bindconfirm="updateConfirm" value="{{updateContent}}" 
+              bindcancel="hideUpdateConfirm" visible="{{visibleUpdateConfirm}}">
+              </t-confirm>
 </view>

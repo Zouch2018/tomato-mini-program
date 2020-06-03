@@ -7,5 +7,4 @@
       <open-data type="userNickName" class="name"></open-data>
   </view>
   <button class="loginButton" open-type="getUserInfo" bindgetuserinfo='login'>登录</button>
-  <navigator url="/pages/binding/binding" class='binding'>还没有与PC端绑定？去绑定</navigator>  
 </view>   

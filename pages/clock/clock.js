@@ -1,4 +1,6 @@
 // pages/clock/clock.js
+const {http} = require('../../lib/http.js');
+
 Page({
 
   data: {
@@ -8,11 +10,16 @@ Page({
     timerStatus: 'stop',
     confirmVisible: false,
     againButtonVisible: false,
-    finishConfirmVisible: false
+    finishConfirmVisible: false,
+    clock:{}
   },
 
   onShow: function () {
     this.startTimer()
+    http.post('/tomatoes').then(response =>{
+      this.setData({clock:response.response.data.resource})
+      
+    })
   },
   startTimer(){
     this.setData({timerStatus: 'start'})
@@ -55,11 +62,17 @@ Page({
   },
   hideConfirm(){
     this.setData({confirmVisible:false})
-    console.log(this.data.confirmVisible)
     this.startTimer()
   },
+  //放弃番茄todo
   confirmAbandon(event){
-
+    let content = event.detail
+    http.put(`/tomatoes/${this.data.clock.id}`,{
+      description: content,
+      aborted:true
+    }).then(response => {
+      wx.navigateBack({to: -1})
+    })
   },
   confirmFinish(event){
 
@@ -71,14 +84,22 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    this.clearTimer()
+    http.put(`/tomatoes/${this.data.clock.id}`,{
+      description: "退出放弃",
+      aborted: true
+    })
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    this.clearTimer()
+    http.put(`/tomatoes/${this.data.clock.id}`,{
+      description: "退出放弃",
+      aborted: true
+    })
   },
 
   
