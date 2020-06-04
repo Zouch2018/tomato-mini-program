@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "番茄ToDo",
+    "navigationBarTitleText": "朝夕ToDo",
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
